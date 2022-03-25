@@ -4,7 +4,6 @@ fn main() {
     let api_key: &str = "9cb6de7ec25ee5dc276df1539830eb35";
     // let mut easy = Easy::new();
     let url = format!("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=1&appid={}", api_key);
-    let mut data: [1, 1] =
     match reqwest::get(&url) {
         Ok(mut response) => {
             // Check if 200
